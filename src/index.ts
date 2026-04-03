@@ -74,7 +74,7 @@ function getBPScore(bp: string): { score: number; invalid: boolean } {
 
   if (sys >= 140 || dia >= 90) return { score: 4, invalid: false }; // stage 2
   if (sys >= 130 || dia >= 80) return { score: 3, invalid: false }; // stage 1
-  if (sys >= 120 && dia < 80) return { score: 2, invalid: false };  // elevated
+  if (sys >= 120 && sys <= 129 && dia < 80) return { score: 2, invalid: false };  // elevated
   return { score: 1, invalid: false };                               // normal
 }
 
